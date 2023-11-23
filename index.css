@@ -1,3 +1,4 @@
+/* Global Styling */
 *{
   margin:0;
   padding:0;
@@ -10,10 +11,364 @@ html{
 }
 body{
   background-color: #0f0f0f;
+  overflow: hidden;
+}
+main{
+  flex-grow: 1;
 }
 .material-symbols-outlined {
-  color:white;
+  color: rgb(241,241,241);
 }
 .displayNone{
   display: none;
+}
+.setCursorAsPointer, button, img{
+  cursor:pointer;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration: none;
+  color:#f1f1f1;
+  font-size: .9rem;
+  font-weight: 400;  
+}
+.active{
+  background-color: #272727;  
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width:0.6rem;   
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 2rem;
+    
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f0f0f; 
+}
+
+
+/* Header Section */
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  
+}
+header .searchBar{
+  display: flex;
+  height: 2.5rem;
+  width: 40rem;
+  justify-content: center;
+}
+header .searchBar input{
+  width: 90%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border-radius: 2rem;
+  border: 1px solid #303030;
+  background: #121212;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  color:rgba(255, 255, 255, 0.88);
+  
+}
+header .searchBar input:focus{
+  outline:none;
+  border: 1px solid #1C62B9;
+}
+
+header .searchBar button.searchLens{
+  background-color: #222222;
+  border: 1px solid #303030;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  padding: 0 1.2rem;
+}
+
+header .searchBar button.microphone{  
+  background-color: #222222;
+  border: 1px solid #303030;
+  border-radius: 5rem;
+  padding:.5rem;
+  margin-left:1rem;
+}
+header div:last-child{
+  height:2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7rem;
+}
+header div:last-child img{
+  width:2.5rem;
+  border-radius: 50%;
+}
+header div:last-child button{
+  background: none;
+  border:none;
+}
+
+header div:first-child{
+  display: flex;
+  width: 9rem;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+header div:first-child a span{
+  position: absolute;
+  font-size: .7rem;
+  color:#aaaaaa;
+  right: -1rem;
+  top: 0.3rem;
+}
+
+header .menu{
+  padding:.5rem;
+  border-radius: 50%;
+  transition: .5;
+}
+header .menu:hover{
+  background-color:#272727;
+}
+
+div.wrapperSidebarAndMain{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SideBar section */
+aside{
+  min-width: 15rem;
+  /* background: yellow; */
+}
+aside nav.primaryNav, main{
+  overflow:scroll;
+  height:100vh;
+  /* padding: 0 1rem; */
+}
+aside nav.primaryNav{
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: .5s;
+}
+aside nav.primaryNav:hover{
+  overflow-y: scroll;
+}
+aside nav.primaryNav ul.navList li{
+  padding: 0.5rem 1rem;
+  transition: .2s;
+  border-radius: .5rem;
+  width: 12.5rem;
+}
+aside nav.primaryNav ul.navList li:hover{
+   background-color: #272727;  
+}
+aside nav.primaryNav ul.navList li a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.icon{
+  margin-right: 1.5rem;
+
+}
+
+img.icon{
+  border-radius: 50%;
+  width: 1.5rem;
+}
+aside nav.primaryNav hr{
+  border: none;
+  border-top: 1px solid rgba(128, 128, 128, .5);
+  margin: 1rem 0;
+  width: 12.5rem;
+}
+
+aside nav.primaryNav h2{
+  font-size: 1rem;
+  color:#f1f1f1;  
+  margin:0.5rem 1rem;
+  
+}
+
+
+aside nav.primaryNav div{
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+h2.you img{
+  width:1rem;
+  top: .1rem;
+  position: relative;
+  left: .2rem;
+}
+
+li.blueDot{
+  position: relative;
+}
+li.blueDot::after{
+  content:"\2022";
+  color:rgb(62 166 255);
+  position: absolute;
+  right: 0;
+  top: .5rem;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+/* Kind of footer section inside aside */
+div.kindOfFooterSection{
+  min-height: 16rem;
+}
+div.kindOfFooterSection ul{
+  display: flex;
+  flex-wrap: wrap;
+  /* min-height: 20rem; */
+}
+div.kindOfFooterSection ul li{
+  padding: 0 .2rem;
+  /* margin:0; */
+}
+
+div.kindOfFooterSection ul li a{
+  font-size: .8rem;
+  color: #aaaaaa;
+  font-weight: 500;
+}
+div.kindOfFooterSection div p{
+ font-size:.8rem;
+ color: #717171;
+}
+
+/* YoutubeVideos Filters Nav */
+
+main nav.filtersNav{
+  display: flex;
+  /* min-height: 3rem; */
+  /* background-color: lightblue; */
+  margin-bottom: 2rem;
+  justify-content: center;
+  position: sticky;
+  top: 0rem;
+  background: #0f0f0f;
+  padding-bottom: .5rem;
+}
+main nav.filtersNav ul{
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+main nav.filtersNav ul li{
+  padding: .5rem .6rem;
+  background-color: #272727;
+  border-radius: .5rem;
+  /* max-height: 2rem; */
+  flex-shrink: 0;
+}
+main nav.filtersNav ul li a{
+  color:#f1f1f1;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+main nav.filtersNav>div{
+  /* padding-top:.2rem; */
+  position: relative;
+}
+
+main nav.filtersNav>div span.material-symbols-outlined{
+  padding: .5rem;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  position: absolute;
+  transition: .2s;
+  cursor:pointer;
+  font-weight: normal;
+  right: -2.5rem;
+}
+main nav.filtersNav>div span.material-symbols-outlined:hover{
+  background-color: #3F3F3F;
+}
+
+/* <!-- Videos Thumbnails --> */
+main div.wrapperVideoThumbnails{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 5rem;
+  justify-content: center;
+}
+main div.wrapperVideoThumbnails div.video {
+  max-width: 21rem;
+  /* background: yellow; */
+  max-height: 20rem;
+}
+
+main div.wrapperVideoThumbnails div.video div.thumbnail img{
+  border-radius: .5rem;
+}
+main div.wrapperVideoThumbnails div.video div.info{
+  display: flex;
+  gap: .5rem;
+  padding-top: .3rem;
+}
+main div.wrapperVideoThumbnails div.video div.info div.channelImg img{
+  width: 3rem;
+  border-radius: 5rem;
+  margin-top: .2rem;
+}
+
+main div.wrapperVideoThumbnails div.video div.info div.metadata{
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+main div.wrapperVideoThumbnails div.video div.info div.metadata h2{
+  line-height: 1.1rem;
+}
+
+main div.wrapperVideoThumbnails div.video div.info div.metadata h2 a{
+  font-size: .9rem;
+  font-weight: 450;
+}
+
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.channelName {
+  display: flex;
+  align-items: center;
+}
+
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.channelName img{
+  margin-left: .5rem;
+  width: 1rem;
+}
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.channelName a{
+  font-weight: 400;
+  transition: .2s;
+  color: #aaaaaa;
+  
+}
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.channelName a:hover{
+  color:white;
+  
+}
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.viewsAndPublishedWhen a{
+  color: #aaaaaa;
+  position: relative;
+  top: -.2rem;
+}
+main div.wrapperVideoThumbnails div.video div.info div.metadata div.viewsAndPublishedWhen a span:nth-child(2)::before{
+  content:"•";
+  padding:0 .5rem;
+  padding-right: .3rem;
 }

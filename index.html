@@ -28,57 +28,591 @@
   </head>
   <body>
     <h1 class="displayNone">YouTube Clone</h1>
+  <!-- Header Section -->
     <header>
       <div>
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined menu setCursorAsPointer">menu</span>
         <a href="#" title="YouTube Home"><img src="Images/youTubePremium.png" alt="YouTube Logo"><span>IN</span></a>
       </div>
-      <div>
+      <div class="searchBar">
         <input type="search" name="search" placeholder="Search">
-        <button><span class="material-symbols-outlined" title="Search">search</span></button>
-        <button><span class="material-symbols-outlined" title="Search with your voice">mic</span></button>
+        <button class="searchLens setCursorAsPointer"><span class="material-symbols-outlined" title="Search">search</span></button>
+        <button class="microphone setCursorAsPointer"><span class="material-symbols-outlined" title="Search with your voice">mic</span></button>
       </div>
       <div>
-        <span class="material-symbols-outlined" title="Create">video_call</span>
-        <span class="material-symbols-outlined" title="Notification">notifications</span>
+        <button><span class="material-symbols-outlined" title="Create">video_call</span></button>
+        <button><span class="material-symbols-outlined" title="Notification">notifications</span></button>
         <img src="Images/myProfilePic.jpg" alt="Profile Picture">
       </div>
     </header>
-    <aside>
-      <nav>
-        <ul>
-          <li><a href="#"><span class="material-symbols-outlined" title="Home">home</span><span>Home</span></a></li>
-          <li><a href="#"><img src="Images/UI-Icons/shorts.svg" alt="Shorts"><span>Shorts</span></a></li>
-          <li><a href="#"><span class="material-symbols-outlined" title="Subscriptions">Subscriptions</span><span>Subscriptions</span></a></li>
-          <li><a href="#"><img src="Images/UI-Icons/music.svg" alt="music"><span>YouTube Music</span></a></li>
-        </ul>
-        <hr>
-        <div>
-          <h2><span>You</span><img src="Images/UI-Icons/arrowRight.svg" alt="arrowRight"></h2>
-          <ul>
-            <li><a href="#"><img src="Images/UI-Icons/yourChannel.svg" alt="Your Channel"><span>Your Channel</span></a></li>
-            <li><a href="#"><img src="Images/UI-Icons/history.svg" alt="History"><span>History</span></a></li>
-            <li><a href="#"><img src="Images/UI-Icons/yourVideos.svg" alt="Your Videos"><span>Your Videos</span></a></li>
-            <li><a href="#"><img src="Images/UI-Icons/watchLater.svg" alt="Watch Later"><span>Watch Later</span></a></li>
-            <li><a href="#"><img src="Images/UI-Icons/downloads.svg" alt="Downloads"><span>Downloads</span></a></li>
-            <li><a href="#"><img src="Images/UI-Icons/showMore.svg" alt="Show more"><span>Show more</span></a></li>
-          </ul>
-        </div>
-        <hr>
-        <div>
-          <h2>Subscriptions</h2>
-          <ul>
-            <li><a href="#"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"><span>Geekster</span></a></li>
-            <li><a href="#"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"><span>Fraz</span></a></li>
-            <li><a href="#"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"><span>Indian Farmer</span></a></li>
-            <li><a href="#"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"><span>Cycle Baba</span></a></li>
-            <li><a href="#"><img src="Images/Channel-Icons/fitTuber.jpg" alt="Fit Tuber"><span>Fit Tuber</span></a></li>
-            <li><a href="#"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"><span>Sunil Minglani</span></a></li>
+    <!-- Sidebar and main section -->
+    <div class="wrapperSidebarAndMain">
+      <!-- Sidebar -->
+        <aside>
+          <nav class="primaryNav">
+            <ul class="navList">
+              <li class='active'><a href="#"><span class="material-symbols-outlined icon" title="Home">home</span><span>Home</span></a></li>
+              <li><a href="#"><img class='icon' src="Images/UI-Icons/shorts.svg" alt="Shorts"><span>Shorts</span></a></li>
+              <li><a href="#"><span class="material-symbols-outlined icon" title="Subscriptions">Subscriptions</span><span>Subscriptions</span></a></li>
+              <li><a href="#"><img class='icon'  src="Images/UI-Icons/music.svg" alt="music"><span>YouTube Music</span></a></li>
+            </ul>
+            <hr>
+            <div>
+              <h2 class="you"><span>You </span><img class='icon' src="Images/UI-Icons/arrowRight.svg" alt="arrowRight"></h2>
+              <ul class="navList">
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/yourChannel.svg" alt="Your Channel"><span>Your Channel</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/history.svg" alt="History"><span>History</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/yourVideos.svg" alt="Your Videos"><span>Your Videos</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/watchLater.svg" alt="Watch Later"><span>Watch Later</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/downloads.svg" alt="Downloads"><span>Downloads</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/showMore.svg" alt="Show more"><span>Show more</span></a></li>
+              </ul>
+            </div>
+            <hr>
+            <div>
+              <h2>Subscriptions</h2>
+              <ul class="navList">
+                <li class='blueDot'><a  href="https://www.youtube.com/@Geeksterin"><img class='icon' src="Images/Channel-Icons/geekster.jpg" alt="Geekster"><span>Geekster</span></a></li>
+                <li class='blueDot'><a  href="https://www.youtube.com/@mohammadfraz"><img class='icon' src="Images/Channel-Icons/fraz.jpg" alt="Fraz"><span>Fraz</span></a></li>
+                <li><a href="https://www.youtube.com/@IndianFarmer"><img class='icon' src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"><span>Indian Farmer</span></a></li>
+                <li><a href="https://www.youtube.com/@cyclebaba"><img class='icon' src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"><span>Cycle Baba</span></a></li>
+                <li class='blueDot'><a  href="https://www.youtube.com/@FitTuber"><img class='icon' src="Images/Channel-Icons/fitTuber.jpg" alt="Fit Tuber"><span>Fit Tuber</span></a></li>
+                <li><a href="https://www.youtube.com/@SunilMinglani"><img class='icon' src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"><span>Sunil Minglani</span></a></li>
+              </ul>
+            </div> 
+    
+            <hr>
+            <div>
+              <h2>Explore</h2>
+              <ul class="navList">
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/trending.svg" alt="Trending"><span>Trending</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/shopping.svg" alt="Shopping"><span>Shopping</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/music.svg" alt="Music"><span>Music</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/movies.svg" alt="Movies"><span>Movies</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/live.svg" alt="Live"><span>Live</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/gaming.svg" alt="Gaming"><span>Gaming</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/news.svg" alt="News"><span>News</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/sports.svg" alt="Sports"><span>Sports</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/learning.svg" alt="Learning"><span>Learning</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/fashionAndBeauty.svg" alt="Fashion & Beauty"><span>Fashion & Beauty</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/podcasts.svg" alt="Podcasts"><span>Podcasts</span></a></li>                        
+              </ul>
+            </div> 
+            <hr>
+            <div>
+              <h2>More from YouTube</h2>
+              <ul class="navList">
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/youtubeStudio.svg" alt="YouTube Studio"><span>YouTube Studio</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/youtubeMusic.svg" alt="YouTube Music"><span>YouTube Music</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/youtubeKids.svg" alt="YouTube Kids"><span>YouTube Kids</span></a></li>
+              </ul>
+            </div>
+            <hr>
+            <div>      
+              <ul class="navList">
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/settings.svg" alt="Settings"><span>Settings</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/reportHistory.svg" alt="Report history"><span>Report history</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/help.svg" alt="Help"><span>Help</span></a></li>
+                <li><a href="#"><img class='icon' src="Images/UI-Icons/sendFeedback.svg" alt="Send feedback"><span>Send feedback</span></a></li>
+              </ul>
+            </div>
+            <hr>
+          <!-- Kind of footer section -->
+            <div class="kindOfFooterSection">
+              <div>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Copyright</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Creators</a></li>
+                  <li><a href="#">Advertise</a></li>
+                  <li><a href="#">Developers</a></li>
+                </ul>
+              </div>
+              <br>
+              <div>
+                <ul>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy Policy & Safety</a></li>
+                  <li><a href="#">How YouTube works</a></li>
+                  <li><a href="#">Test new features</a></li>
+                </ul>
+              </div>
+              <br>
+              <div>
+                <p>&copy; 2023 Google LLC</p>
+              </div>
+            </div>
+          </nav>
+        </aside>
+      <!-- main section -->
+        <main>
+        <!-- Filters | tags | categories -->
+          <nav class="filtersNav">
+            <ul>
+              <li><a href="#">All</a></li>
+              <li><a href="#">Data Structures</a></li>
+              <li><a href="#">Gaming</a></li>
+              <li><a href="#">Stocks</a></li>
+              <li><a href="#">Union Public Service Commission</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Thoughts</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Live</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
 
-          </ul>
-        </div>        
-      </nav>
-    </aside>
+            <div title="Next"><span class="material-symbols-outlined">chevron_right</span></div>
+          </nav>
+        <!-- Videos Thumbnails -->
+          <div class="wrapperVideoThumbnails">
+          <!-- Geekster videos -->
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=m8wNMO8NTwQ"><img src="Images/VideoThumbnails/Geekster/lifeAsGoogleSoftwareEngineerRajneeshSir.webp" alt="lifeAsGoogleSoftwareEngineerRajneeshSir"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=m8wNMO8NTwQ">Life as a Google Software Engineer | Tech Talk with Rajneesh, SWE 2 at Google</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=m8wNMO8NTwQ"><span>374 views</span><span>2 weeks ago</span></a></div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=NPMSziDlTKM"><img src="Images/VideoThumbnails/Geekster/synchronousVsAsynchronousAkhilSir.webp" alt="synchronousVsAsynchronousAkhilSir"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=NPMSziDlTKM">Synchronous vs. Asynchronous: Decoding the Interview Question | #java #async #sync</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=NPMSziDlTKM"><span>145 views</span><span>3 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=b51Ae-P5Eac"><img src="Images/VideoThumbnails/Geekster/howToExplainYourProjectInInterview.webp" alt="howToExplainYourProjectInInterview"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=b51Ae-P5Eac">How to explain your project in an interview? | 5 Things To Cover | #CareerTips #MostAsked #interview</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=b51Ae-P5Eac"><span>347 views</span><span>5 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=48GrpzR9vmQ"><img src="Images/VideoThumbnails/Geekster/learnSqlInOneVideo.webp" alt="learnSqlInOneVideo"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=48GrpzR9vmQ">Learn SQL in ONE Video | DBMS for Placements</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=48GrpzR9vmQ"><span>458 views</span><span>6 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=GFgAt9Q8lCc"><img src="Images/VideoThumbnails/Geekster/anagramLeetcode242.webp" alt="anagramLeetcode242"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=GFgAt9Q8lCc">Anagram | LeetCode 242 | Top Interview Question | Java DSA | Geekster | Amazon Microsoft</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=GFgAt9Q8lCc"><span>27 views</span><span>5 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>
+    
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=RJV8h3jxQjg"><img src="Images/VideoThumbnails/Geekster/roadmapToBecomeFullSTackDeveloper.webp" alt="roadmapToBecomeFullSTackDeveloper"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@Geeksterin"><img src="Images/Channel-Icons/geekster.jpg" alt="Geekster"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=RJV8h3jxQjg">Free Tech Masterclass - Roadmap To Become A Full Stack Developer | Become a Web Developer in 2023</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@Geeksterin" title="Geekster">Geekster</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=RJV8h3jxQjg"><span>188 views</span><span>8 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>       
+          <!-- Fraz Videos -->
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=igfzqDO_9jE"><img src="Images/VideoThumbnails/Fraz/podcastWithGoogleRecruiter.webp" alt="podcastWithGoogleRecruiter"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=igfzqDO_9jE">Talk with Google Recruiter | Resume, Tier 3, CGPA, Career Gap….</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=igfzqDO_9jE"><span>219K views</span><span>2 weeks ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=5blSG0JZNbg&t=9s"><img src="Images/VideoThumbnails/Fraz/middleOfLinkedList.webp" alt="middleOfLinkedList"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=5blSG0JZNbg&t=9s">Middle of the Linked List | EP 5</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=5blSG0JZNbg&t=9s"><span>28K views</span><span>2 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=o84_EH4UJXc&t=454s"><img src="Images/VideoThumbnails/Fraz/furthestBuildingYouCanReachLeetcode1642.webp" alt="furthestBuildingYouCanReachLeetcode1642"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=o84_EH4UJXc&t=454s">Leectode 1642.  Furthest Building You Can Reach</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=o84_EH4UJXc&t=454s"><span>8K views</span><span>3 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=EOrzE8V7OoE"><img src="Images/VideoThumbnails/Fraz/dataAnalystToSDE.webp" alt="dataAnalystToSDE"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=EOrzE8V7OoE">Switch from 15000/Month to 25LPA | How she learned DSA for Interviews</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=EOrzE8V7OoE"><span>241K views</span><span>1 month ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=d0iE9Bd1Zf8"><img src="Images/VideoThumbnails/Fraz/frazCodingJourney.webp" alt="frazCodingJourney"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=d0iE9Bd1Zf8">5 years of Coding in 5 minutes | From struggling in DSA to Google</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=d0iE9Bd1Zf8"><span>48K views</span><span>2 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=bGLLrXWTe0g"><img src="Images/VideoThumbnails/Fraz/howManyLeetcodeQuestionsDIdFrazSolved.webp" alt="howManyLeetcodeQuestionsDIdFrazSolved"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@mohammadfraz"><img src="Images/Channel-Icons/fraz.jpg" alt="Fraz"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=bGLLrXWTe0g">How many Leetcode questions I solved ?? Easy Medium Hard</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@mohammadfraz" title="Fraz">Fraz</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=bGLLrXWTe0g"><span>76K views</span><span>5 months ago</span></a></div>                  
+                </div>
+              </div>
+            </div>    
+          <!-- Sunil Minglani Sir -->          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=3AS6qJixHqc"><img src="Images/VideoThumbnails/SunilMinglani/howToDoSwingTrading.webp" alt="howToDoSwingTrading"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=3AS6qJixHqc">SWING Trading कैसे करें ? | SSC Episode-56 | Stock market for Beginners | sunilminglani.com</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=3AS6qJixHqc"><span>1.3M views</span><span>3 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=IG39eFAiC_o"><img src="Images/VideoThumbnails/SunilMinglani/whyStockMarketIsTheBestBusiness.webp" alt="whyStockMarketIsTheBestBusiness"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=IG39eFAiC_o">Why Stock Market is the Best Business ? | अनेक खूबियों वाला धंधा | Episode-28 | SM</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=IG39eFAiC_o"><span>973K views</span><span>5 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=uYTat1YjcyU"><img src="Images/VideoThumbnails/SunilMinglani/canTradingGenerateRegularMonthlyIncome.webp" alt="canTradingGenerateRegularMonthlyIncome"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=uYTat1YjcyU">Can Trading Generate Regular Monthly Income ?( In Hindi) || Bazaar Bites Episode-23|| Sunil Minglani</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=uYTat1YjcyU"><span>596K views</span><span>6 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=eEuBC1abQ1c"><img src="Images/VideoThumbnails/SunilMinglani/focusIsImportant.webp" alt="focusIsImportant"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=eEuBC1abQ1c">पैसा बनेगा ध्यान से ,ना कि ज्यादा ज्ञान से : Indicators || Bazaar Bites Episode-43 || Sunil Minglani</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=eEuBC1abQ1c"><span>327K views</span><span>6 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=TfSOtq_jUpM"><img src="Images/VideoThumbnails/SunilMinglani/moneyTree.webp" alt="moneyTree"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=TfSOtq_jUpM">पैसो का पेड़  | SSC Episode-8 | Stock market for Beginners | sunilminglani.com</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=TfSOtq_jUpM"><span>317K views</span><span>4 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=Fe-K38z6fsE"><img src="Images/VideoThumbnails/SunilMinglani/takeFullMoneyForMyHardWork.webp" alt="takeFullMoneyForMyHardWork"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@SunilMinglani"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Sunil Minglani"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=Fe-K38z6fsE">SWING Trading कैसे करें ? | SSC Episode-56 | Stock market for Beginners | sunilminglani.com</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@SunilMinglani" title="Sunil Minglani">Sunil Minglani</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=Fe-K38z6fsE"><span>250K views</span><span>4 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>             
+
+          <!-- Fit Tuber -->          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=dqKfdkkHLIY"><img src="Images/VideoThumbnails/FitTuber/stopEatingThemWrong.webp" alt="stopEatingThemWrong"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=dqKfdkkHLIY">5 Daily Foods You are Eating the Wrong Way</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=dqKfdkkHLIY"><span>6.6M views</span><span>1 year ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=-QPF6OezA0Y"><img src="Images/VideoThumbnails/FitTuber/10MinutesDetoxThatMyBodyNeeds.webp" alt="10MinutesDetoxThatMyBodyNeeds"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=-QPF6OezA0Y">How to Detox Your Body in 10 Minutes (MY DETOX SECRET)</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=-QPF6OezA0Y"><span>4.6M views</span><span>4 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=Fw1HKAOyO54"><img src="Images/VideoThumbnails/FitTuber/peopleEatingFruitsWrongWay.webp" alt="peopleEatingFruitsWrongWay"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=Fw1HKAOyO54">6 Reasons You Are Eating Fruits the Wrong Way</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=Fw1HKAOyO54"><span>4.6M views</span><span>5 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=Yq0cuX__wck"><img src="Images/VideoThumbnails/FitTuber/reduceBodyHeat.webp" alt="reduceBodyHeat"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=Yq0cuX__wck">5 Amazing Ways to Reduce Body Heat (Hairfall, Pimples, Acidity)</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=Yq0cuX__wck"><span>4.5M views</span><span>4 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=wtVsFfFeYNs"><img src="Images/VideoThumbnails/FitTuber/whatIsYourBodyType.webp" alt="whatIsYourBodyType"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=wtVsFfFeYNs">Ultimate Ayurvedic Body Test in 5 Mins (Vata Pitta Kapha Explained)</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=wtVsFfFeYNs"><span>3.7M views</span><span>3 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=1FU6KwaSw0E"><img src="Images/VideoThumbnails/FitTuber/fixYourBodyPosture.webp" alt="fixYourBodyPosture"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@FitTuber"><img src="Images/Channel-Icons/sunilMinglani.jpg" alt="Fit Tuber"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=1FU6KwaSw0E">How to Fix Your Body Posture (No More Slouching!)</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@FitTuber" title="Fit Tuber">Fit Tuber</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=1FU6KwaSw0E"><span>3M views</span><span>2 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+          <!-- Cycle Baba -->          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=EA0jpbRnb88"><img src="Images/VideoThumbnails/CycleBaba/toLondonByCycle.webp" alt="toLondonByCycle"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=EA0jpbRnb88">INDIA TO LONDON  BY  CYCLE | One INDIAN 45 Countries Road Trip</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=EA0jpbRnb88"><span>2.1M views</span><span>4 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=jHC2ng7pVLI"><img src="Images/VideoThumbnails/CycleBaba/lifeTimeExperience.webp" alt="lifeTimeExperience"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=jHC2ng7pVLI">Most Adventurous Cycling in Dangerous Forest. #BabainAfrica Ep.336</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=jHC2ng7pVLI"><span>438K views</span><span>2 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=7tTE1aiqNdA"><img src="Images/VideoThumbnails/CycleBaba/babaInEthopia.webp" alt="babaInEthopia"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=7tTE1aiqNdA">World Tour By Bicycle | Cycle Vlog in Ethiopia | Cycle Baba | #BabainAfrica Ep.324</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=7tTE1aiqNdA"><span>244K views</span><span>2 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=jtqG9WdRVzI"><img src="Images/VideoThumbnails/CycleBaba/pyramidsOfEgypt.webp" alt="pyramidsOfEgypt"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=jtqG9WdRVzI">Bachpan Ka Sapna Pura Hua Giza Pyramids Tour@cyclebaba | GIZA PYRAMIDS of EGYPT #babainafrica Ep.306</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=jtqG9WdRVzI"><span>163K views</span><span>2 years ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=WRosegk8mCY"><img src="Images/VideoThumbnails/CycleBaba/albertEinsteinHomeTownGermany.webp" alt="albertEinsteinHomeTownGermany"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=WRosegk8mCY">India 🇮🇳 to Germany 🇩🇪 cycle Tour , Kya German Sach Main ashe hota hai</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=WRosegk8mCY"><span>28K views</span><span>2 days ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+          
+            <div class="video">
+              <div class='thumbnail'><a href="https://www.youtube.com/watch?v=c6-1SjIgEjU"><img src="Images/VideoThumbnails/CycleBaba/babaInswitzerland.webp" alt="babaInswitzerland"></a></div>
+              <div class="info">
+                <div class="channelImg"><a href="https://www.youtube.com/@cyclebaba"><img src="Images/Channel-Icons/cycleBaba.jpg" alt="Cycle Baba"></a></div>
+                <div class="metadata">
+                  <h2><a href="https://www.youtube.com/watch?v=c6-1SjIgEjU">India to Switzerland Travel Vlog By Bicycle | EP 619 |  World Tour By Cycle Baba</a></h2>
+                  <div class="channelName"><a href="https://www.youtube.com/@cyclebaba" title="Cycle Baba">Cycle Baba</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                  <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=c6-1SjIgEjU"><span>63K views</span><span>1 month ago</span></a></div>                  
+                </div>
+              </div>
+            </div>   
+            
+          <!-- Indian Farmer -->          
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=vvOfUeSD_E4"><img src="Images/VideoThumbnails/IndianFarmer/lifetimeNoElectricityBill.webp" alt="lifetimeNoElectricityBill"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=vvOfUeSD_E4">न बिजली ना टेंशन....सोलर से लाइफटाइम इरीगेशन | Solar Water Pump A to Z | Indian Farmer</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=vvOfUeSD_E4"><span>2.5M views</span><span>1 year ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=EYodtNHt3f0"><img src="Images/VideoThumbnails/IndianFarmer/CroresRupeesGingerFarming.webp" alt="CroresRupeesGingerFarming"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=EYodtNHt3f0">करोड़ों की अदरक खेती | Biggest Ginger Farming in India | AgriBusiness Success Story | Indian Farmer</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=EYodtNHt3f0"><span>1.1M views</span><span>4 years ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=kOEXu0yKY6I"><img src="Images/VideoThumbnails/IndianFarmer/mushroomFarming.webp" alt="mushroomFarming"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=kOEXu0yKY6I">1000रु.किलो मशरुम से मालामाल कमाई🤑🤑Commercial Mushroom Farming Business A to Z | Agribusiness 2020</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=kOEXu0yKY6I"><span>826K views</span><span>3 years ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=ZieZeIl9NNA"><img src="Images/VideoThumbnails/IndianFarmer/leavesOilFarming.webp" alt="leavesOilFarming"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=ZieZeIl9NNA">इन पत्तियों का ऑइल बिकता हैं 10 से 20,000रु/लीटर😳😱A to Z Farming | Indian Farmer</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=ZieZeIl9NNA"><span>707K views</span><span>1 year ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=xtGtP23Abf8"><img src="Images/VideoThumbnails/IndianFarmer/guavaFarming.webp" alt="guavaFarming"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=xtGtP23Abf8">Thai7 अमरूद ने किया मालामाल🤑🤑Commercial Guava Farming in India | Fruit Farming AgriBusiness</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=xtGtP23Abf8"><span>380K views</span><span>3 years ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          <div class="video">
+            <div class='thumbnail'><a href="https://www.youtube.com/watch?v=G8EjPPHt8xI"><img src="Images/VideoThumbnails/IndianFarmer/marigoldFarming.webp" alt="marigoldFarming"></a></div>
+            <div class="info">
+              <div class="channelImg"><a href="https://www.youtube.com/@IndianFarmer"><img src="Images/Channel-Icons/indianFarmer.jpg" alt="Indian Farmer"></a></div>
+              <div class="metadata">
+                <h2><a href="https://www.youtube.com/watch?v=G8EjPPHt8xI">मालामाल कमाई गेंदा फूल खेती | Profitable Marigold Farming in India | कम लागत, ज्यादा प्रॉफिट</a></h2>
+                <div class="channelName"><a href="https://www.youtube.com/@IndianFarmer" title="Indian Farmer">Indian Farmer</a><img title="Verified" src="Images/UI-Icons/verified.svg" alt="Verified"></div>
+                <div class="viewsAndPublishedWhen"><a href="https://www.youtube.com/watch?v=G8EjPPHt8xI"><span>117K views</span><span>5 years ago</span></a></div>                  
+              </div>
+            </div>
+          </div>   
+                  
+          
+
+          </div> <!-- wrapperVideoThumbnails -->
+        </main>
+    </div>
 
   </body>
 </html>
