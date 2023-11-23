@@ -159,7 +159,7 @@ aside nav.primaryNav{
   padding: 0 1rem;
   transition: .5s;
 }
-aside nav.primaryNav:hover{
+aside nav.primaryNav:hover, aside nav.primaryNav:focus{
   overflow-y: scroll;
 }
 aside nav.primaryNav ul.navList li{
@@ -261,6 +261,9 @@ main nav.filtersNav{
   top: 0rem;
   background: #0f0f0f;
   padding-bottom: .5rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 main nav.filtersNav ul{
   display: flex;
@@ -269,12 +272,25 @@ main nav.filtersNav ul{
   flex-wrap: nowrap;
 }
 
+
 main nav.filtersNav ul li{
   padding: .5rem .6rem;
   background-color: #272727;
   border-radius: .5rem;
   /* max-height: 2rem; */
   flex-shrink: 0;
+  transition: .3s;
+}
+main nav.filtersNav ul li:hover{
+  background-color:rgba(255,255,255,0.2);
+}
+
+
+main nav.filtersNav ul li.activeFilter{
+  background-color:#f1f1f1;  
+}
+main nav.filtersNav ul li.activeFilter a{
+  color:#0f0f0f;  
 }
 main nav.filtersNav ul li a{
   color:#f1f1f1;
